@@ -55,6 +55,9 @@
                                                 <state key="normal" title="Forgot User Name?">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="forgotNameTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="OMu-J8-qYU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLo-wV-sfN">
                                                 <rect key="frame" x="174" y="0.0" width="137" height="33"/>
@@ -62,6 +65,9 @@
                                                 <state key="normal" title="Forgot Password?">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="forgotPasswordTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUn-Wh-1NM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

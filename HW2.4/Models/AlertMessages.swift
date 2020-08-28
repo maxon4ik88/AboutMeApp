@@ -12,4 +12,5 @@ enum AlertMessages: String {
     case enterName = "Please, enter your name!"
     case enterPassword = "Please, enter your password!"
     case badLogin = "Login or password is incorrect!"
+    case nonExist = "This login does not exist!"
 }

@@ -8,4 +8,13 @@
 
 import Foundation
 
-let passwd = ["admin" : "admin11", "shvanov" : "1qaz"]
+struct User {
+    let login: String
+    let password: String
+    let name: String
+}
+
+let shvanov = User(login: "shvanov", password: "1qaz", name: "Maxim")
+let admin = User(login: "admin", password: "admin11", name: "Alexey")
+
+let users = ["shvanov" : shvanov, "admin" : admin]
