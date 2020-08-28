@@ -19,6 +19,7 @@
 		87A95F8224F930E700C3B526 /* NothingElseMatters.mov in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F8124F930E700C3B526 /* NothingElseMatters.mov */; };
 		87A95F8424F93C5E00C3B526 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8324F93C5E00C3B526 /* Authentication.swift */; };
 		87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */; };
+		87D3565224F9851E00B11497 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3565124F9851E00B11497 /* AlertMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		87A95F8124F930E700C3B526 /* NothingElseMatters.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NothingElseMatters.mov; sourceTree = "<group>"; };
 		87A95F8324F93C5E00C3B526 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeUserViewController.swift; path = HW2.4/ViewControllers/WelcomeUserViewController.swift; sourceTree = SOURCE_ROOT; };
+		87D3565124F9851E00B11497 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				87A95F8324F93C5E00C3B526 /* Authentication.swift */,
+				87D3565124F9851E00B11497 /* AlertMessages.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A95F6724F9025100C3B526 /* ViewController.swift in Sources */,
+				87D3565224F9851E00B11497 /* AlertMessages.swift in Sources */,
 				87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */,
 				87A95F6324F9025100C3B526 /* AppDelegate.swift in Sources */,
 				87A95F6524F9025100C3B526 /* SceneDelegate.swift in Sources */,
