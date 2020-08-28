@@ -17,6 +17,8 @@
 		87A95F7E24F930BF00C3B526 /* BillieJean.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F7D24F930BF00C3B526 /* BillieJean.MP4 */; };
 		87A95F8024F930CF00C3B526 /* HeroOfAsphalt.mov in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F7F24F930CF00C3B526 /* HeroOfAsphalt.mov */; };
 		87A95F8224F930E700C3B526 /* NothingElseMatters.mov in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F8124F930E700C3B526 /* NothingElseMatters.mov */; };
+		87A95F8424F93C5E00C3B526 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8324F93C5E00C3B526 /* Authentication.swift */; };
+		87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		87A95F7D24F930BF00C3B526 /* BillieJean.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BillieJean.MP4; sourceTree = "<group>"; };
 		87A95F7F24F930CF00C3B526 /* HeroOfAsphalt.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = HeroOfAsphalt.mov; sourceTree = "<group>"; };
 		87A95F8124F930E700C3B526 /* NothingElseMatters.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NothingElseMatters.mov; sourceTree = "<group>"; };
+		87A95F8324F93C5E00C3B526 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeUserViewController.swift; path = HW2.4/ViewControllers/WelcomeUserViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				87A95F6624F9025100C3B526 /* ViewController.swift */,
+				87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		87A95F7C24F906C300C3B526 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87A95F8324F93C5E00C3B526 /* Authentication.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,8 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A95F6724F9025100C3B526 /* ViewController.swift in Sources */,
+				87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */,
 				87A95F6324F9025100C3B526 /* AppDelegate.swift in Sources */,
 				87A95F6524F9025100C3B526 /* SceneDelegate.swift in Sources */,
+				87A95F8424F93C5E00C3B526 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
