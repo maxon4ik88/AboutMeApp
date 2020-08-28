@@ -13,6 +13,10 @@
 		87A95F6A24F9025100C3B526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F6824F9025100C3B526 /* Main.storyboard */; };
 		87A95F6C24F9025200C3B526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F6B24F9025200C3B526 /* Assets.xcassets */; };
 		87A95F6F24F9025200C3B526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F6D24F9025200C3B526 /* LaunchScreen.storyboard */; };
+		87A95F7724F9058200C3B526 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F7624F9058200C3B526 /* .gitignore */; };
+		87A95F7E24F930BF00C3B526 /* BillieJean.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F7D24F930BF00C3B526 /* BillieJean.MP4 */; };
+		87A95F8024F930CF00C3B526 /* HeroOfAsphalt.mov in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F7F24F930CF00C3B526 /* HeroOfAsphalt.mov */; };
+		87A95F8224F930E700C3B526 /* NothingElseMatters.mov in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F8124F930E700C3B526 /* NothingElseMatters.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		87A95F6B24F9025200C3B526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A95F6E24F9025200C3B526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87A95F7024F9025200C3B526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A95F7624F9058200C3B526 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		87A95F7D24F930BF00C3B526 /* BillieJean.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BillieJean.MP4; sourceTree = "<group>"; };
+		87A95F7F24F930CF00C3B526 /* HeroOfAsphalt.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = HeroOfAsphalt.mov; sourceTree = "<group>"; };
+		87A95F8124F930E700C3B526 /* NothingElseMatters.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NothingElseMatters.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 		87A95F5624F9025100C3B526 = {
 			isa = PBXGroup;
 			children = (
+				87A95F7624F9058200C3B526 /* .gitignore */,
 				87A95F6124F9025100C3B526 /* HW2.4 */,
 				87A95F6024F9025100C3B526 /* Products */,
 			);
@@ -56,15 +65,58 @@
 		87A95F6124F9025100C3B526 /* HW2.4 */ = {
 			isa = PBXGroup;
 			children = (
-				87A95F6224F9025100C3B526 /* AppDelegate.swift */,
-				87A95F6424F9025100C3B526 /* SceneDelegate.swift */,
-				87A95F6624F9025100C3B526 /* ViewController.swift */,
-				87A95F6824F9025100C3B526 /* Main.storyboard */,
-				87A95F6B24F9025200C3B526 /* Assets.xcassets */,
-				87A95F6D24F9025200C3B526 /* LaunchScreen.storyboard */,
-				87A95F7024F9025200C3B526 /* Info.plist */,
+				87A95F7A24F9063600C3B526 /* ViewControllers */,
+				87A95F7C24F906C300C3B526 /* Models */,
+				87A95F7924F9062400C3B526 /* StoryBoards */,
+				87A95F7824F905F400C3B526 /* SupportingFiles */,
+				87A95F7B24F9067B00C3B526 /* Sources */,
 			);
 			path = HW2.4;
+			sourceTree = "<group>";
+		};
+		87A95F7824F905F400C3B526 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				87A95F6224F9025100C3B526 /* AppDelegate.swift */,
+				87A95F6424F9025100C3B526 /* SceneDelegate.swift */,
+				87A95F7024F9025200C3B526 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		87A95F7924F9062400C3B526 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				87A95F6824F9025100C3B526 /* Main.storyboard */,
+				87A95F6D24F9025200C3B526 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		87A95F7A24F9063600C3B526 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				87A95F6624F9025100C3B526 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		87A95F7B24F9067B00C3B526 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				87A95F7F24F930CF00C3B526 /* HeroOfAsphalt.mov */,
+				87A95F7D24F930BF00C3B526 /* BillieJean.MP4 */,
+				87A95F8124F930E700C3B526 /* NothingElseMatters.mov */,
+				87A95F6B24F9025200C3B526 /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		87A95F7C24F906C300C3B526 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +177,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A95F7724F9058200C3B526 /* .gitignore in Resources */,
 				87A95F6F24F9025200C3B526 /* LaunchScreen.storyboard in Resources */,
+				87A95F7E24F930BF00C3B526 /* BillieJean.MP4 in Resources */,
+				87A95F8024F930CF00C3B526 /* HeroOfAsphalt.mov in Resources */,
 				87A95F6C24F9025200C3B526 /* Assets.xcassets in Resources */,
 				87A95F6A24F9025100C3B526 /* Main.storyboard in Resources */,
+				87A95F8224F930E700C3B526 /* NothingElseMatters.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HW2.4/Info.plist;
+				INFOPLIST_FILE = HW2.4/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = HW2.4/Info.plist;
+				INFOPLIST_FILE = HW2.4/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
