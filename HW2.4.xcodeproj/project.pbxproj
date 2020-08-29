@@ -20,6 +20,9 @@
 		87A95F8424F93C5E00C3B526 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8324F93C5E00C3B526 /* Authentication.swift */; };
 		87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */; };
 		87D3565224F9851E00B11497 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3565124F9851E00B11497 /* AlertMessages.swift */; };
+		87D91D6524FAE0990043428E /* UserAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D91D6424FAE0990043428E /* UserAboutViewController.swift */; };
+		87D91D6824FAE1CF0043428E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D91D6724FAE1CF0043428E /* AVFoundation.framework */; };
+		87D91D6A24FAE1DE0043428E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D91D6924FAE1DE0043428E /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		87A95F8324F93C5E00C3B526 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeUserViewController.swift; path = HW2.4/ViewControllers/WelcomeUserViewController.swift; sourceTree = SOURCE_ROOT; };
 		87D3565124F9851E00B11497 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		87D91D6424FAE0990043428E /* UserAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAboutViewController.swift; sourceTree = "<group>"; };
+		87D91D6724FAE1CF0043428E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		87D91D6924FAE1DE0043428E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D91D6A24FAE1DE0043428E /* AVKit.framework in Frameworks */,
+				87D91D6824FAE1CF0043428E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,7 @@
 				87A95F7624F9058200C3B526 /* .gitignore */,
 				87A95F6124F9025100C3B526 /* HW2.4 */,
 				87A95F6024F9025100C3B526 /* Products */,
+				87D91D6624FAE1CE0043428E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +113,7 @@
 			children = (
 				87A95F6624F9025100C3B526 /* ViewController.swift */,
 				87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */,
+				87D91D6424FAE0990043428E /* UserAboutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -126,6 +136,15 @@
 				87D3565124F9851E00B11497 /* AlertMessages.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		87D91D6624FAE1CE0043428E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87D91D6924FAE1DE0043428E /* AVKit.framework */,
+				87D91D6724FAE1CF0043428E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +225,7 @@
 				87A95F6724F9025100C3B526 /* ViewController.swift in Sources */,
 				87D3565224F9851E00B11497 /* AlertMessages.swift in Sources */,
 				87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */,
+				87D91D6524FAE0990043428E /* UserAboutViewController.swift in Sources */,
 				87A95F6324F9025100C3B526 /* AppDelegate.swift in Sources */,
 				87A95F6524F9025100C3B526 /* SceneDelegate.swift in Sources */,
 				87A95F8424F93C5E00C3B526 /* Authentication.swift in Sources */,
@@ -362,7 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "maxonDevelopment.HW2-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -380,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "maxonDevelopment.HW2-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

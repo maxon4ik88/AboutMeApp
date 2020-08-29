@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var logInButton: UIButton!
     @IBOutlet var forgotNameButton: UIButton!
@@ -21,6 +21,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
+        passwordTextField.delegate = self
+        overrideUserInterfaceStyle = .light
+        nameTextField.text = "shvanov"
+        passwordTextField.text = "1qaz"
         
     }
     
@@ -33,7 +38,7 @@ class ViewController: UIViewController {
             helpPasswordCall(login: "")
             print("Please, enter your name")
         case _ where users[nameTextField.text!] != nil: helpPasswordCall(login: nameTextField.text!)
-        default: alertCall(message: AlertMessages.nonExist.rawValue)
+        default: alertCall(message: AlertMessages.nonExist.rawValue, textField: nil)
         }
     }
     
@@ -47,12 +52,12 @@ class ViewController: UIViewController {
     // MARK: LoginButton
     @IBAction func loginButtonTapped() {
         if nameTextField.text == nil || nameTextField.text == "" {
-            alertCall(message: AlertMessages.enterName.rawValue)
+            alertCall(message: AlertMessages.enterName.rawValue, textField: nameTextField)
             return
         }
         
         if passwordTextField.text == nil || passwordTextField.text == "" {
-            alertCall(message: AlertMessages.enterPassword.rawValue)
+            alertCall(message: AlertMessages.enterPassword.rawValue, textField: passwordTextField)
             return
         }
         
@@ -60,17 +65,19 @@ class ViewController: UIViewController {
             if user.password == passwordTextField.text! {
                 performSegue(withIdentifier: "welcomeUserSegue", sender: nil)
             } else {
-                alertCall(message: AlertMessages.badLogin.rawValue)
+                alertCall(message: AlertMessages.badLogin.rawValue, textField: nil)
             }
         } else {
-            alertCall(message: AlertMessages.badLogin.rawValue)
+            alertCall(message: AlertMessages.badLogin.rawValue, textField: nil)
         }
     }
     
     // MARK: SystemFunctions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        guard let welcomeDestinationVC = segue.destination as? WelcomeUserViewController else { return }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let welcomeDestinationVC = tabBarController.viewControllers?.first as? WelcomeUserViewController else { return }
+        welcomeDestinationVC.nameFromLogin = users[nameTextField.text!]?.name
         
     }
     
@@ -78,15 +85,41 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField:
+            passwordTextField.becomeFirstResponder()
+            return true
+        case passwordTextField:
+            loginButtonTapped()
+            return true
+        default:
+            return false
+        }
+    }
+    
+}
+
+extension ViewController {
+    
     // MARK: Allerts
     
     // MARK: ALERT_CALL: AlertMessage
-    private func alertCall(message: String) {
-        alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured")
-        }))
-        present(alertController, animated: true, completion: nil)
+    private func alertCall(message: String, textField: UITextField?) {
+        if let textField = textField {
+            alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured")
+                textField.becomeFirstResponder()
+            }))
+            present(alertController, animated: true, completion: nil)
+        } else {
+            alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured")
+            }))
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     // MARK: ALERT_CALL: HelpName
@@ -121,11 +154,10 @@ class ViewController: UIViewController {
                     }))
                     self.present(self.alertController, animated: true, completion: nil)
                 } else {
-                    self.alertCall(message: AlertMessages.nonExist.rawValue)
+                    self.alertCall(message: AlertMessages.nonExist.rawValue, textField: nil)
                 }
             }))
             present(alertController, animated: true, completion: nil)
         }
     }
 }
-

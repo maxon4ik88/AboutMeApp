@@ -9,9 +9,14 @@
 import UIKit
 
 class WelcomeUserViewController: UIViewController {
-
+    
+    @IBOutlet var welcomeLabel: UILabel!
+    var nameFromLogin: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let login = nameFromLogin else { return }
+        welcomeLabel.text = "Welcome, \(login)!"
 
         // Do any additional setup after loading the view.
     }
