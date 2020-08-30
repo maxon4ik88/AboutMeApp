@@ -19,31 +19,31 @@ class UserAboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        metallicaButton.layer.cornerRadius = 15
-        // Do any additional setup after loading the view.
-    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @IBAction func metallicaButtonDidTouch() {
-        metallicaButton.alpha = 0.5
     }
     
-    @IBAction func metallicaButtonOutTouch() {
-        metallicaButton.alpha = 1.0
+    @IBAction func buttonDidTouch(_ sender: UIButton) {
+        sender.alpha = 0.5
     }
     
-    @IBAction func metallicaButtonTapped() {
-        if let path = Bundle.main.path(forResource: "NothingElseMatters", ofType: "mov") {
-            print("OK!")
+    @IBAction func buttonsOutTouch(_ sender: UIButton) {
+        sender.alpha = 1.0
+    }
+    
+    @IBAction func buttonsPressed(_ sender: UIButton) {
+        
+        switch sender {
+        case ariaButton: playVideo(videName: "HeroOfAsphalt", type: "mov", sender: sender)
+        case metallicaButton: playVideo(videName: "NothingElseMatters", type: "mov", sender: sender)
+        case jacksonButton: playVideo(videName: "BillieJean", type: "MP4", sender: sender)
+        default: break
+            
+        }
+        
+    }
+    
+    private func playVideo(videName: String, type: String, sender: UIButton) {
+        if let path = Bundle.main.path(forResource: videName, ofType: type) {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             let videoPlayer = AVPlayerViewController()
             videoPlayer.player = video
@@ -51,57 +51,7 @@ class UserAboutViewController: UIViewController {
             present(videoPlayer, animated: true) {
                 video.play()
             }
-        } else {
-            print("NO!")
         }
-        metallicaButton.alpha = 1.0
-    }
-    
-    @IBAction func ariaButtonDidTouch() {
-        ariaButton.alpha = 0.5
-    }
-    
-    @IBAction func ariaButtonOutTouch() {
-        ariaButton.alpha = 1.0
-    }
-    
-    @IBAction func ariaButtonTapped() {
-        if let path = Bundle.main.path(forResource: "HeroOfAsphalt", ofType: "mov") {
-            print("OK!")
-            let video = AVPlayer(url: URL(fileURLWithPath: path))
-            let videoPlayer = AVPlayerViewController()
-            videoPlayer.player = video
-            
-            present(videoPlayer, animated: true) {
-                video.play()
-            }
-        } else {
-            print("NO!")
-        }
-        ariaButton.alpha = 1.0
-    }
-    
-    @IBAction func jacksonButtonDidTouch() {
-        jacksonButton.alpha = 0.5
-    }
-    
-    @IBAction func jacksonButtonOutTouch() {
-        jacksonButton.alpha = 1.0
-    }
-    
-    @IBAction func jacksonButtonPressed() {
-        if let path = Bundle.main.path(forResource: "BillieJean", ofType: "MP4") {
-            print("OK!")
-            let video = AVPlayer(url: URL(fileURLWithPath: path))
-            let videoPlayer = AVPlayerViewController()
-            videoPlayer.player = video
-            
-            present(videoPlayer, animated: true) {
-                video.play()
-            }
-        } else {
-            print("NO!")
-        }
-        jacksonButton.alpha = 1.0
+        sender.alpha = 1.0
     }
 }

@@ -80,7 +80,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <variation key="heightClass=compact-widthClass=compact"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -145,9 +144,9 @@
                                                 <rect key="frame" x="149" y="0.0" width="149" height="93.5"/>
                                                 <state key="normal" image="ariaNew"/>
                                                 <connections>
-                                                    <action selector="ariaButtonDidTouch" destination="vp8-rl-2ia" eventType="touchDown" id="RAt-ja-iAo"/>
-                                                    <action selector="ariaButtonOutTouch" destination="vp8-rl-2ia" eventType="touchDragExit" id="rGf-L6-fqO"/>
-                                                    <action selector="ariaButtonTapped" destination="vp8-rl-2ia" eventType="touchUpInside" id="kS8-ME-e0J"/>
+                                                    <action selector="buttonDidTouch:" destination="vp8-rl-2ia" eventType="touchDown" id="xUL-Z6-AM5"/>
+                                                    <action selector="buttonsOutTouch:" destination="vp8-rl-2ia" eventType="touchDragExit" id="HI2-SX-9if"/>
+                                                    <action selector="buttonsPressed:" destination="vp8-rl-2ia" eventType="touchUpInside" id="YiV-i3-NjD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -168,9 +167,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" image="metallica"/>
                                                 <connections>
-                                                    <action selector="metallicaButtonDidTouch" destination="vp8-rl-2ia" eventType="touchDown" id="beK-9J-uwq"/>
-                                                    <action selector="metallicaButtonOutTouch" destination="vp8-rl-2ia" eventType="touchDragExit" id="pqD-jF-td0"/>
-                                                    <action selector="metallicaButtonTapped" destination="vp8-rl-2ia" eventType="touchUpInside" id="pqO-AH-eU8"/>
+                                                    <action selector="buttonDidTouch:" destination="vp8-rl-2ia" eventType="touchDown" id="mdj-00-25f"/>
+                                                    <action selector="buttonsOutTouch:" destination="vp8-rl-2ia" eventType="touchDragExit" id="26K-zR-5dK"/>
+                                                    <action selector="buttonsPressed:" destination="vp8-rl-2ia" eventType="touchUpInside" id="HPM-UN-xcK"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -190,9 +189,9 @@
                                                 <rect key="frame" x="103" y="0.0" width="195" height="93.5"/>
                                                 <state key="normal" image="mjNew"/>
                                                 <connections>
-                                                    <action selector="jacksonButtonDidTouch" destination="vp8-rl-2ia" eventType="touchDown" id="PGR-gc-PxV"/>
-                                                    <action selector="jacksonButtonOutTouch" destination="vp8-rl-2ia" eventType="touchDragExit" id="YO9-6N-Hxd"/>
-                                                    <action selector="jacksonButtonPressed" destination="vp8-rl-2ia" eventType="touchUpInside" id="54k-ZP-g8P"/>
+                                                    <action selector="buttonDidTouch:" destination="vp8-rl-2ia" eventType="touchDown" id="A2j-rF-Oxc"/>
+                                                    <action selector="buttonsOutTouch:" destination="vp8-rl-2ia" eventType="touchDragExit" id="ZcE-Zf-Pe0"/>
+                                                    <action selector="buttonsPressed:" destination="vp8-rl-2ia" eventType="touchUpInside" id="V2x-98-1Fm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -224,21 +223,60 @@
             </objects>
             <point key="canvasLocation" x="2984.8000000000002" y="511.39430284857576"/>
         </scene>
-        <!--View Controller-->
+        <!--Second User About View Controller-->
         <scene sceneID="ek3-NN-LRD">
             <objects>
-                <viewController id="ba1-Jb-MFL" sceneMemberID="viewController">
+                <viewController id="ba1-Jb-MFL" customClass="SecondUserAboutViewController" customModule="HW2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6V-Co-UOA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fri-PQ-9vz">
+                                <rect key="frame" x="16" y="304" width="288" height="130.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi! My name is Max, I am 25 years old and I want to be a IOS-developer! " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eOF-SO-7v4">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="130.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_myPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="vrc-kz-9I6">
+                                <rect key="frame" x="65" y="44" width="190" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="qdV-Rd-FH2"/>
+                                    <constraint firstAttribute="width" constant="190" id="zUy-rr-5a1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PS. Guitar in this photo is made of IPhones!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5gZ-kw-Bob">
+                                <rect key="frame" x="16" y="435.5" width="288" height="52.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vrc-kz-9I6" firstAttribute="top" secondItem="XZ7-EA-aLO" secondAttribute="top" constant="44" id="2S4-mp-9Zt"/>
+                            <constraint firstAttribute="trailing" secondItem="5gZ-kw-Bob" secondAttribute="trailing" constant="16" id="4YF-gQ-N4V"/>
+                            <constraint firstAttribute="trailing" secondItem="fri-PQ-9vz" secondAttribute="trailing" constant="16" id="Kqi-fG-EG4"/>
+                            <constraint firstItem="5gZ-kw-Bob" firstAttribute="leading" secondItem="E6V-Co-UOA" secondAttribute="leading" constant="16" id="d8G-9f-cjL"/>
+                            <constraint firstItem="fri-PQ-9vz" firstAttribute="top" secondItem="vrc-kz-9I6" secondAttribute="bottom" constant="10" id="gbx-qQ-f7Z"/>
+                            <constraint firstItem="fri-PQ-9vz" firstAttribute="leading" secondItem="XZ7-EA-aLO" secondAttribute="leading" constant="16" id="noF-IB-Rxl"/>
+                            <constraint firstItem="XZ7-EA-aLO" firstAttribute="bottom" secondItem="5gZ-kw-Bob" secondAttribute="bottom" constant="11" id="ocp-8t-sZH"/>
+                            <constraint firstItem="vrc-kz-9I6" firstAttribute="centerX" secondItem="E6V-Co-UOA" secondAttribute="centerX" id="vRl-1K-jRX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XZ7-EA-aLO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.crop.square" catalog="system" id="hUB-Sr-wfV"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="vrc-kz-9I6" id="Xr4-RZ-LWN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZd-Lb-Mt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3870" y="107"/>
+            <point key="canvasLocation" x="3869.5652173913045" y="106.47321428571428"/>
         </scene>
         <!--Welcome User View Controller-->
         <scene sceneID="lnU-ob-TeD">
@@ -254,14 +292,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wat's up!?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS8-Zw-8Ss">
-                                <rect key="frame" x="85.5" y="254" width="149" height="40"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-gE-rtg">
-                                <rect key="frame" x="115.5" y="429" width="89" height="47"/>
+                                <rect key="frame" x="115.5" y="418" width="89" height="47"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
                                 <state key="normal" title="Logout">
@@ -271,20 +303,36 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="7iP-ft-xJ9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's up!?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS8-Zw-8Ss">
+                                <rect key="frame" x="74.5" y="75" width="171" height="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In this application u can find information about the creator" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duA-dl-AOg">
+                                <rect key="frame" x="16" y="245" width="288" height="98"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fbb-j9-qvb" firstAttribute="centerX" secondItem="VPo-bD-Go6" secondAttribute="centerX" id="2ig-sA-p4P"/>
+                            <constraint firstAttribute="trailing" secondItem="duA-dl-AOg" secondAttribute="trailing" constant="16" id="5Tg-B3-QQ9"/>
                             <constraint firstItem="BS8-Zw-8Ss" firstAttribute="centerX" secondItem="VPo-bD-Go6" secondAttribute="centerX" id="H1u-P5-jpq"/>
+                            <constraint firstItem="duA-dl-AOg" firstAttribute="top" secondItem="BS8-Zw-8Ss" secondAttribute="bottom" constant="130" id="Qr2-Hz-tH6"/>
                             <constraint firstItem="rE5-gE-rtg" firstAttribute="centerX" secondItem="VPo-bD-Go6" secondAttribute="centerX" id="TPT-yK-zrr"/>
-                            <constraint firstItem="hU3-8q-UNT" firstAttribute="bottom" secondItem="rE5-gE-rtg" secondAttribute="bottom" constant="23" id="Woo-It-g2m"/>
-                            <constraint firstItem="BS8-Zw-8Ss" firstAttribute="centerY" secondItem="VPo-bD-Go6" secondAttribute="centerY" id="ZFM-rF-TNo"/>
+                            <constraint firstItem="hU3-8q-UNT" firstAttribute="bottom" secondItem="rE5-gE-rtg" secondAttribute="bottom" constant="34" id="Woo-It-g2m"/>
+                            <constraint firstItem="BS8-Zw-8Ss" firstAttribute="top" secondItem="fbb-j9-qvb" secondAttribute="bottom" constant="8" id="g2h-xD-dyS"/>
                             <constraint firstItem="fbb-j9-qvb" firstAttribute="top" secondItem="hU3-8q-UNT" secondAttribute="top" constant="20" id="gnd-zk-8Cd"/>
+                            <constraint firstItem="duA-dl-AOg" firstAttribute="leading" secondItem="hU3-8q-UNT" secondAttribute="leading" constant="16" id="hBa-LW-tF2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hU3-8q-UNT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="power" catalog="system" id="AEO-LB-Im9"/>
                     <connections>
+                        <outlet property="logoutButton" destination="rE5-gE-rtg" id="gXP-HB-XjE"/>
                         <outlet property="welcomeLabel" destination="fbb-j9-qvb" id="8Xd-j9-NSm"/>
                     </connections>
                 </viewController>
@@ -317,6 +365,7 @@
         <image name="guitarNew" width="1024" height="1024"/>
         <image name="metallica" width="835" height="433"/>
         <image name="mjNew" width="1000" height="459"/>
+        <image name="new_myPhoto" width="3024" height="4032"/>
         <image name="person.crop.square" catalog="system" width="128" height="114"/>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
         <image name="power" catalog="system" width="128" height="124"/>

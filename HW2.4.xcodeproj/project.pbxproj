@@ -19,6 +19,7 @@
 		87A95F8224F930E700C3B526 /* NothingElseMatters.mov in Resources */ = {isa = PBXBuildFile; fileRef = 87A95F8124F930E700C3B526 /* NothingElseMatters.mov */; };
 		87A95F8424F93C5E00C3B526 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8324F93C5E00C3B526 /* Authentication.swift */; };
 		87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */; };
+		87C0651724FC27C3000A6270 /* SecondUserAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C0651624FC27C3000A6270 /* SecondUserAboutViewController.swift */; };
 		87D3565224F9851E00B11497 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3565124F9851E00B11497 /* AlertMessages.swift */; };
 		87D91D6524FAE0990043428E /* UserAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D91D6424FAE0990043428E /* UserAboutViewController.swift */; };
 		87D91D6824FAE1CF0043428E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D91D6724FAE1CF0043428E /* AVFoundation.framework */; };
@@ -40,6 +41,7 @@
 		87A95F8124F930E700C3B526 /* NothingElseMatters.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = NothingElseMatters.mov; sourceTree = "<group>"; };
 		87A95F8324F93C5E00C3B526 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeUserViewController.swift; path = HW2.4/ViewControllers/WelcomeUserViewController.swift; sourceTree = SOURCE_ROOT; };
+		87C0651624FC27C3000A6270 /* SecondUserAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondUserAboutViewController.swift; path = HW2.4/StoryBoards/SecondUserAboutViewController.swift; sourceTree = SOURCE_ROOT; };
 		87D3565124F9851E00B11497 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		87D91D6424FAE0990043428E /* UserAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAboutViewController.swift; sourceTree = "<group>"; };
 		87D91D6724FAE1CF0043428E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +113,7 @@
 		87A95F7A24F9063600C3B526 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				87C0651624FC27C3000A6270 /* SecondUserAboutViewController.swift */,
 				87A95F6624F9025100C3B526 /* ViewController.swift */,
 				87A95F8524F944E500C3B526 /* WelcomeUserViewController.swift */,
 				87D91D6424FAE0990043428E /* UserAboutViewController.swift */,
@@ -225,6 +228,7 @@
 				87A95F6724F9025100C3B526 /* ViewController.swift in Sources */,
 				87D3565224F9851E00B11497 /* AlertMessages.swift in Sources */,
 				87A95F8624F944E500C3B526 /* WelcomeUserViewController.swift in Sources */,
+				87C0651724FC27C3000A6270 /* SecondUserAboutViewController.swift in Sources */,
 				87D91D6524FAE0990043428E /* UserAboutViewController.swift in Sources */,
 				87A95F6324F9025100C3B526 /* AppDelegate.swift in Sources */,
 				87A95F6524F9025100C3B526 /* SceneDelegate.swift in Sources */,
