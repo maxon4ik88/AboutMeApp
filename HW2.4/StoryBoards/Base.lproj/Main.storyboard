@@ -89,7 +89,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lqp-Tr-r4B"/>
                     <connections>
                         <outlet property="forgotNameButton" destination="y14-Pz-Qyt" id="tY5-Pi-CAs"/>
                         <outlet property="forgotPasswordButton" destination="nLo-wV-sfN" id="kk8-UT-dNy"/>

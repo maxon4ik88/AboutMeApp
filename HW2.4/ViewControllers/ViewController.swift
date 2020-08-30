@@ -23,11 +23,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nameTextField.delegate = self
         passwordTextField.delegate = self
-        overrideUserInterfaceStyle = .light
-        nameTextField.text = "shvanov"
-        passwordTextField.text = "1qaz"
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let welcomeDestinationVC = tabBarController.viewControllers?.first as? WelcomeUserViewController else { return }
+        welcomeDestinationVC.nameFromLogin = users[nameTextField.text!]?.name
+
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
     
     // MARK: ButtonActions
     
@@ -36,7 +46,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         switch nameTextField.text! {
         case "":
             helpPasswordCall(login: "")
-            print("Please, enter your name")
         case _ where users[nameTextField.text!] != nil: helpPasswordCall(login: nameTextField.text!)
         default: alertCall(message: AlertMessages.nonExist.rawValue, textField: nil)
         }
@@ -70,21 +79,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             alertCall(message: AlertMessages.badLogin.rawValue, textField: nil)
         }
+
     }
-    
-    // MARK: SystemFunctions
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
-        guard let welcomeDestinationVC = tabBarController.viewControllers?.first as? WelcomeUserViewController else { return }
-        welcomeDestinationVC.nameFromLogin = users[nameTextField.text!]?.name
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameTextField:
@@ -98,10 +95,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-}
-
-extension ViewController {
-    
     // MARK: Allerts
     
     // MARK: ALERT_CALL: AlertMessage
@@ -109,14 +102,12 @@ extension ViewController {
         if let textField = textField {
             alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured")
                 textField.becomeFirstResponder()
             }))
             present(alertController, animated: true, completion: nil)
         } else {
             alertController = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured")
             }))
             present(alertController, animated: true, completion: nil)
         }
@@ -126,7 +117,6 @@ extension ViewController {
     private func helpNameCall(login: String) {
         alertController = UIAlertController(title: "Try this login:", message: login, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            NSLog("The \"HELP_NAME!\" alert occured")
         }))
         present(alertController, animated: true, completion: nil)
     }
@@ -136,7 +126,6 @@ extension ViewController {
         if login != "" {
             alertController = UIAlertController(title: "Your password is:", message: users[login]?.password, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                NSLog("The \"HELP_PASSWORD!\" alert occured")
             }))
             present(alertController, animated: true, completion: nil)
         } else {
@@ -150,7 +139,6 @@ extension ViewController {
                 if users[(text?.text)!] != nil {
                     self.alertController = UIAlertController(title: "Your password is:", message: users[(text!.text)!]?.password, preferredStyle: .alert)
                     self.alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                        NSLog("The \"HELP_PASSWORD!\" alert occured")
                     }))
                     self.present(self.alertController, animated: true, completion: nil)
                 } else {
@@ -160,4 +148,5 @@ extension ViewController {
             present(alertController, animated: true, completion: nil)
         }
     }
+    
 }

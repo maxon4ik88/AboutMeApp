@@ -11,8 +11,8 @@ import UIKit
 class SecondUserAboutViewController: UIViewController {
 
     @IBOutlet var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         photoImageView.layer.cornerRadius = 30
         
